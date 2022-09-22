@@ -1,0 +1,308 @@
+@font-face {
+  font-family: Cairo-N;
+  src: url(Cairo-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Cairo-B;
+  src: url(Cairo-Bold.ttf);
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(250, 250, 250);
+}
+* {
+  font-family: Cairo-N;
+  padding: 0;
+  margin: 0;
+  transition-duration: 100ms;
+}
+.card {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #deefe7;
+  border: 0.5px solid rgba(112, 112, 112, 10%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition-duration: 200ms;
+}
+.imageC {
+  width: 100%;
+}
+.ProductImage {
+  border-radius: 20px;
+  width: 100%;
+}
+.Title {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 18pt;
+  font-weight: bold;
+}
+.NewPrice {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+  font-weight: 900;
+  font-size: 20pt;
+  font-family: Cairo-B;
+}
+.OldPrice {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  text-decoration: line-through;
+
+  font-weight: 900;
+  font-size: 15pt;
+  font-family: Cairo-B;
+}
+.discount {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(200, 200, 200, 0.7);
+  padding: 0px 10px;
+  font-size: 18pt;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  font-weight: bolder;
+  font-family: Cairo-B;
+  color: rgba(0, 0, 0, 0.7);
+}
+.CardC {
+  position: relative;
+  height: 100%;
+  flex: 1;
+}
+.AddToCart {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  font-size: 25pt;
+  color: rgb(102, 119, 111);
+  filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
+  transition-duration: 100ms;
+}
+.AddToCart:hover {
+  color: rgb(92, 109, 101);
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+}
+.card:hover {
+  transform: scale(0.95);
+  cursor: pointer;
+}
+.THeaderB {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+  transition-duration: 100ms;
+}
+.THeaderB i {
+  margin: 0px 10px;
+}
+.THeaderB p {
+  margin: 0px 10px;
+  font-family: Cairo-B;
+  letter-spacing: 0.5px;
+}
+.THeaderB:hover {
+  background-color: #deefe727;
+}
+header {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  height: 70px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0px 10%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.Search {
+  display: flex;
+  width: 500px;
+  height: 50%;
+  justify-content: stretch;
+  align-items: stretch;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(220, 220, 220);
+  background-color: rgba(222, 239, 231, 0.5);
+}
+.Search input {
+  flex-grow: 1;
+  outline: 0px;
+  border: 0px;
+  background-color: transparent;
+  padding: 0px 10px;
+}
+.SearchBTN {
+  outline: 0px;
+  border: 0px;
+  padding: 5px 15px;
+  margin: 2px 2px;
+  font-size: 12pt;
+  text-align: center;
+  line-height: 100%;
+  font-family: Cairo-B;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.SearchBTN:hover {
+  cursor: pointer;
+  background-color: rgba(222, 239, 231, 0.5);
+}
+.THeader {
+  width: 100%;
+  background-color: #000f16;
+  padding: 0px 10%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: rgba(200, 210, 221, 1);
+  box-sizing: border-box;
+}
+.Body {
+  width: 100%;
+  padding: 0px 10%;
+  box-sizing: border-box;
+}
+#MenuB {
+  opacity: 0;
+  visibility: hidden;
+}
+.ToolsBar {
+  background-color: #deefe7;
+  margin: 30px 0px 0px 0px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(7, 1fr);
+  border-radius: 10px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.ToolsBar a {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15pt;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.ToolsBar a:focus {
+  background-color: #c4dacf;
+}
+.ToolsBarActive {
+  background-color: #c4dacf;
+}
+.galary {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.galaryE1 {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.B2 {
+  display: flex;
+}
+.SideBar {
+  margin-top: 20px;
+  background-color: #deefe7;
+  height: fit-content;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.SideBarB {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+.SideBarB:hover {
+  background-color: #c4dacf;
+}
+.SideBarB i {
+  padding: 0px 10px;
+}
+.SideBarB p {
+  font-size: 13pt;
+  letter-spacing: 1px;
+}
+.B3 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+.ProductsTitle {
+  background-color: #deefe7;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0px;
+  font-size: 25pt;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Cairo-B;
+  letter-spacing: 2px;
+}
+.CardsContainer {
+  padding: 20px 0px;
+}
+
+@media all and (max-width: 800px) {
+  .Search {
+    opacity: 0;
+    visibility: hidden;
+  }
+  #MenuB {
+    opacity: 100;
+    visibility: visible;
+  }
+}
+@media all and (max-width: 1040px) {
+  .THeader {
+    padding: 0px 10px;
+  }
+  header {
+    padding: 0px 20px;
+  }
+  body {
+    background-color: white;
+  }
+  .Body {
+    padding: 0px 5%;
+  }
+  .SideC {
+    display: none;
+  }
+  .galary {
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+  }
+}
